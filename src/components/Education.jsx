@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 function Education() {
-  const [info, setInfo] = useState({ name: "", school: "", degree: "", year: ""});
+  const [education, setEducation] = useState({ name: "", school: "", degree: "", year: ""});
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setInfo({ ...info, [name]: value });
+    setInfo({ ...education, [name]: value });
   };
 
   return (
@@ -14,28 +14,28 @@ function Education() {
         type="text"
         name="name"
         placeholder="Name"
-        value={info.name}
+        value={education.name}
         onChange={handleChange}
       ></input>
       <input
         type="text"
         name="school"
         placeholder="School"
-        value={info.school}
+        value={education.school}
         onChange={handleChange}
       ></input>
       <input
         type="text"
         name="degree"
         placeholder="Degree"
-        value={info.degree}
+        value={education.degree}
         onChange={handleChange}
       ></input>
       <input
         type="text"
         name="year"
         placeholder="Year"
-        value={info.year}
+        value={education.year}
         onChange={handleChange}
       ></input>
     </div>

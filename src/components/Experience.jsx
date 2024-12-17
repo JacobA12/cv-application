@@ -1,10 +1,15 @@
 import React, { useState } from "react";
 function Experience() {
-  const [info, setInfo] = useState({ company: "", role: "", dateBegin: "", dateEnd: "", describeRole: ""});
-
+  const [experience, setExperience] = useState({
+    company: "",
+    position: "",
+    responsibilities: "",
+    dateFrom: "",
+    dateTo: "",
+  });
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setInfo({ ...info, [name]: value });
+    setInfo({ ...experience, [name]: value });
   };
 
   return (
@@ -14,35 +19,34 @@ function Experience() {
         type="text"
         name="company"
         placeholder="Company Name"
-        value={info.company}
+        value={experience.company}
         onChange={handleChange}
       ></input>
       <input
         type="text"
-        name="role"
-        placeholder="Role"
-        value={info.role}
+        name="position"
+        placeholder="Position Title"
+        value={experience.position}
         onChange={handleChange}
       ></input>
+      <textarea
+        name="responsibilities"
+        placeholder="Main Responsibilities"
+        value={experience.responsibilities}
+        onChange={handleChange}
+      ></textarea>
       <input
         type="date"
-        name="dateBegin"
+        name="startDate"
         placeholder="Start Date"
-        value={info.dateBegin}
+        value={experience.dateFrom}
         onChange={handleChange}
       ></input>
       <input
         type="date"
-        name="dateEnd"
+        name="endDate"
         placeholder="End Date"
-        value={info.dateEnd}
-        onChange={handleChange}
-      ></input>
-      <input
-        type="text"
-        name="describeRole"
-        placeholder="Describe Role"
-        value={info.describeRole}
+        value={experience.dateTo}
         onChange={handleChange}
       ></input>
     </div>
