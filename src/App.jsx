@@ -7,7 +7,7 @@ function App() {
   return (
     <div>
       {" "}
-      <h1>CV Application</h1> <GeneralInfo /> {" "}
+      <h1>CV Application</h1> <GeneralInfo /> <Education /> <Experience />{" "}
     </div>
   );
 }
