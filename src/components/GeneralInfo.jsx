@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 function GeneralInfo() {
-  const [info, setInfo] = useState({ name: "", email: "", phone: "" });
+  const [info, setInfo] = useState({ name: "", email: "", address: "", phone: "" });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -22,6 +22,13 @@ function GeneralInfo() {
         name="email"
         placeholder="Email"
         value={info.email}
+        onChange={handleChange}
+      ></input>
+      <input
+        type="text"
+        name="address"
+        placeholder="Address"
+        value={info.address}
         onChange={handleChange}
       ></input>
       <input
