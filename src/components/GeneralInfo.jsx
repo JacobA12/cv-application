@@ -1,12 +1,23 @@
 import React, { useState } from "react";
-import "../styles/generalInfo.css"
+import "../styles/generalInfo.css";
 
 function GeneralInfo() {
   const [info, setInfo] = useState({ name: "", email: "", phone: "" });
+  const [isEditing, setIsEditing] = useState(true);
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setInfo({ ...info, [name]: value });
   };
+
+  const handleSubmit = () => {
+    setIsEditing(false);
+  };
+
+  const handleEdit = () => {
+    setIsEditing(true);
+  };
+
   return (
     <div class="general-info">
       {" "}
