@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "../styles/education.css"
 function Education() {
   const [education, setEducation] = useState({
     school: "",
@@ -10,7 +11,7 @@ function Education() {
     setEducation({ ...education, [name]: value });
   };
   return (
-    <div>
+    <div class="education">
       {" "}
       <h2>Educational Experience</h2>{" "}
       <input

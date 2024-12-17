@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import "../styles/experience.css"
+
 function Experience() {
   const [experience, setExperience] = useState({
     company: "",
@@ -12,7 +14,7 @@ function Experience() {
     setExperience({ ...experience, [name]: value });
   };
   return (
-    <div>
+    <div class="experience">
       {" "}
       <h2>Practical Experience</h2>{" "}
       <input

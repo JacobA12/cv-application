@@ -1,22 +1,32 @@
 import React, { useState } from "react";
+import "../styles/skills.css"
 function Skills() {
-  const [skills, setSkills] = useState({ skill: "" });
+  const [skills, setSkills] = useState([{skill: ""}]);
 
-  const handleChange = (e) => {
+  const handleChange = (index, e) => {
     const { name, value } = e.target;
-    setSkills({ ...skills, [name]: value });
+    const newSkills = [...skills];
+    newSkills[index][name] = value;
+    setSkills(newSkills);
+  };
+
+  const addSkill = () => {
+    setSkills([...skills, { skill: ""}]);
   };
 
   return (
-    <div>
+    <div className="skills">
       <h2>Skills</h2>
-      <input
+      {skills.map((skill,index) => (
+        <input
+        key = {index}
         name="skill"
         type="text"
         placeholder="Skill"
-        value={skills.skill}
-        onChange={handleChange}
-      ></input>
+        value={skill.skill}
+        onChange={(e) => handleChange(index, e)} />
+      ))}
+      <button onClick={addSkill}>Add Skill</button>
     </div>
   );
 }

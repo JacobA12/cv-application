@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import "../styles/generalInfo.css"
+
 function GeneralInfo() {
   const [info, setInfo] = useState({ name: "", email: "", phone: "" });
   const handleChange = (e) => {
@@ -6,7 +8,7 @@ function GeneralInfo() {
     setInfo({ ...info, [name]: value });
   };
   return (
-    <div>
+    <div class="general-info">
       {" "}
       <h2>General Information</h2>{" "}
       <input
