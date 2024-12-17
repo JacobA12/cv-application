@@ -22,27 +22,39 @@ function GeneralInfo() {
     <div class="general-info">
       {" "}
       <h2>General Information</h2>{" "}
-      <input
-        type="text"
-        name="name"
-        placeholder="Name"
-        value={info.name}
-        onChange={handleChange}
-      />{" "}
-      <input
-        type="email"
-        name="email"
-        placeholder="Email"
-        value={info.email}
-        onChange={handleChange}
-      />{" "}
-      <input
-        type="tel"
-        name="phone"
-        placeholder="Phone"
-        value={info.phone}
-        onChange={handleChange}
-      />{" "}
+      {isEditing ? (
+        <div>
+          <input
+            type="text"
+            name="name"
+            placeholder="Name"
+            value={info.name}
+            onChange={handleChange}
+          />{" "}
+          <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            value={info.email}
+            onChange={handleChange}
+          />{" "}
+          <input
+            type="tel"
+            name="phone"
+            placeholder="Phone"
+            value={info.phone}
+            onChange={handleChange}
+          />
+        </div>
+      ) : (
+        <div>
+          <p>Name: {info.name}</p>
+          <p>Email: {info.email}</p>
+          <p>Phone: {info.phone}</p>
+          <button onClick={handleEdit}>Edit</button>
+        </div>
+      )}
+      ;{" "}
     </div>
   );
 }
