@@ -64,6 +64,7 @@ function Experience() {
             value={experience.dateTo}
             onChange={handleChange}
           />
+          <button onClick={handleSubmit}>Submit</button>
         </div>
       ) : (
         <div>

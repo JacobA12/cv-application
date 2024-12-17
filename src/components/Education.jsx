@@ -48,6 +48,7 @@ function Education() {
             value={education.date}
             onChange={handleChange}
           />
+          <button onClick={handleSubmit}>Submit</button>
         </div>
       ) : (
         <div>

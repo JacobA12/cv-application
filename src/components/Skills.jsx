@@ -39,6 +39,7 @@ function Skills() {
             />
           ))}
           <button onClick={addSkill}>Add Skill</button>
+          <button onClick={handleSubmit}>Submit</button>
         </div>
       ) : (
         <div>

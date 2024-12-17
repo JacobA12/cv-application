@@ -45,6 +45,7 @@ function GeneralInfo() {
             value={info.phone}
             onChange={handleChange}
           />
+          <button onClick={handleSubmit}>Submit</button>
         </div>
       ) : (
         <div>
