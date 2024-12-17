@@ -54,7 +54,7 @@ function GeneralInfo() {
           <button onClick={handleEdit}>Edit</button>
         </div>
       )}
-      ;{" "}
+      {" "}
     </div>
   );
 }
