@@ -1,45 +1,40 @@
 import React, { useState } from "react";
 function Education() {
-  const [education, setEducation] = useState({ name: "", school: "", degree: "", year: ""});
-
+  const [education, setEducation] = useState({
+    school: "",
+    title: "",
+    date: "",
+  });
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setInfo({ ...education, [name]: value });
+    setEducation({ ...education, [name]: value });
   };
-
   return (
     <div>
-      <h2>Education Information</h2>
-      <input
-        type="text"
-        name="name"
-        placeholder="Name"
-        value={education.name}
-        onChange={handleChange}
-      ></input>
+      {" "}
+      <h2>Educational Experience</h2>{" "}
       <input
         type="text"
         name="school"
-        placeholder="School"
+        placeholder="School Name"
         value={education.school}
         onChange={handleChange}
-      ></input>
+      />{" "}
       <input
         type="text"
-        name="degree"
-        placeholder="Degree"
-        value={education.degree}
+        name="title"
+        placeholder="Title of Study"
+        value={education.title}
         onChange={handleChange}
-      ></input>
+      />{" "}
       <input
-        type="text"
-        name="year"
-        placeholder="Year"
-        value={education.year}
+        type="date"
+        name="date"
+        placeholder="Date of Study"
+        value={education.date}
         onChange={handleChange}
-      ></input>
+      />{" "}
     </div>
   );
 }
-
 export default Education;

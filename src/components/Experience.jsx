@@ -9,48 +9,47 @@ function Experience() {
   });
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setInfo({ ...experience, [name]: value });
+    setExperience({ ...experience, [name]: value });
   };
-
   return (
     <div>
-      <h2>Experience</h2>
+      {" "}
+      <h2>Practical Experience</h2>{" "}
       <input
         type="text"
         name="company"
         placeholder="Company Name"
         value={experience.company}
         onChange={handleChange}
-      ></input>
+      />{" "}
       <input
         type="text"
         name="position"
         placeholder="Position Title"
         value={experience.position}
         onChange={handleChange}
-      ></input>
+      />{" "}
       <textarea
         name="responsibilities"
         placeholder="Main Responsibilities"
         value={experience.responsibilities}
         onChange={handleChange}
-      ></textarea>
+      ></textarea>{" "}
       <input
         type="date"
-        name="startDate"
-        placeholder="Start Date"
+        name="dateFrom"
+        placeholder="Date From"
         value={experience.dateFrom}
         onChange={handleChange}
-      ></input>
+      />{" "}
       <input
         type="date"
-        name="endDate"
-        placeholder="End Date"
+        name="dateTo"
+        placeholder="Date To"
         value={experience.dateTo}
         onChange={handleChange}
-      ></input>
+      />{" "}
     </div>
   );
 }
-
 export default Experience;
